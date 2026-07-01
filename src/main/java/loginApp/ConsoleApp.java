@@ -37,11 +37,7 @@ public class ConsoleApp {
                 if (kaisu < 2) {
                     System.out.println("もう一度ログインしてください！");
                 } else {
-                    System.out.println("========================================");
-                    System.out.println("Forgot password");
-                    System.out.println("Please reset your password at:");
-                    System.out.println("https://example.com/reset-password");
-                    System.out.println("========================================");
+                    System.out.println("パスワード忘れ");
                 }
             }
         }

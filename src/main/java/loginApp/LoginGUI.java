@@ -86,7 +86,7 @@ public class LoginGUI {
             if (kaisu < 2) {
                 messejiLabel.setText("もう一度ログインしてください！");
             } else {
-                messejiLabel.setText("Forgot password - reset at https://example.com/reset");
+                messejiLabel.setText("パスワード忘れ");
                 loginButton.setEnabled(false);
             }
         }
