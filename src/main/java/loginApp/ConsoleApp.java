@@ -7,30 +7,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-/**
- * Console login app - connects to MySQL via JDBC and validates
- * credentials against a "users" table. Gives two attempts before
- * showing a "forgot password" message.
- *
- * Expected table:
- *   CREATE TABLE users (
- *       id       INT PRIMARY KEY AUTO_INCREMENT,
- *       yuuzaName VARCHAR(50) NOT NULL,
- *       password VARCHAR(100) NOT NULL
- *   );
- */
 public class ConsoleApp {
 
-    // ★ Replace with your own MySQL credentials ★
     private static final String DB_URL = "jdbc:mysql://localhost:3306/loginapp_db?useSSL=false&serverTimezone=UTC";
-    private static final String DB_USER = "root";      // MySQL user name
+    private static final String DB_USER = "root";
     private static final String DB_PASS = "C@s38vxuaj";
 
     public static void main(String[] args) {
         Scanner nyuuryoku = new Scanner(System.in);
 
-        int kaisu = 0;          // login attempt counter
-        boolean seikou = false; // success flag
+        int kaisu = 0;
+        boolean seikou = false;
 
         while (kaisu < 2 && !seikou) {
             kaisu++;
