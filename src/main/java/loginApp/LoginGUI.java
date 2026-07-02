@@ -14,8 +14,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+/**
+ * GUI login app using Swing (JFrame). Uses the same "users" table
+ * as ConsoleApp. Shows messages in a JLabel.
+ */
 public class LoginGUI {
-
     private static final String DB_URL = "jdbc:mysql://localhost:3306/loginapp_db?useSSL=false&serverTimezone=UTC";
     private static final String DB_USER = "root";
     private static final String DB_PASS = "C@s38vxuaj";
@@ -25,7 +28,7 @@ public class LoginGUI {
     private JPasswordField passField;
     private JButton loginButton;
 
-    private int kaisu = 0;
+    private int kaisu = 0; 
 
     public LoginGUI() {
         JFrame frame = new JFrame("Login App");
@@ -84,9 +87,9 @@ public class LoginGUI {
             loginButton.setEnabled(false);
         } else {
             if (kaisu < 2) {
-                messejiLabel.setText("もう一度ログインしてください！");
+                messejiLabel.setText("パスワードが間違っています。もう一度ログインしてください！");
             } else {
-                messejiLabel.setText("パスワード忘れ");
+                messejiLabel.setText("Forgot password - reset at https://example.com/reset");
                 loginButton.setEnabled(false);
             }
         }

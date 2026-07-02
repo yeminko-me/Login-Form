@@ -35,7 +35,7 @@ public class ConsoleApp {
                 System.out.println("ログインできました！");
             } else {
                 if (kaisu < 2) {
-                    System.out.println("もう一度ログインしてください！");
+                    System.out.println("パスワードが間違っています。もう一度ログインしてください！");
                 } else {
                     System.out.println("パスワード忘れ");
                 }
